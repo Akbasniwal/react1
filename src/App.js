@@ -16,7 +16,7 @@ function checkWinner(squares) {
     const [a, b, c] = lines[i];
     if (squares[a] === null || squares[b] === null || squares[c] === null)
       n = 0;
-    if (squares[a] === squares[b] && squares[a] === squares[c])
+    else if (squares[a] === squares[b] && squares[a] === squares[c])
       return squares[a];
   }
   if (n === 1) return "Draw";
