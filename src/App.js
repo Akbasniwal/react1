@@ -149,7 +149,7 @@ class Game extends React.Component {
                 if (step > 0) {
                   this.setState({
                     stepnum: step - 1,
-                    is_x_next: step % 2 === 1,
+                    is_x_next:  !this.state.is_x_next,
                   });
                 }
               }}
@@ -179,7 +179,7 @@ class Game extends React.Component {
                 if (history.length > step + 1) {
                   this.setState({
                     stepnum: step + 1,
-                    is_x_next: step % 2 === 1,
+                    is_x_next: !this.state.is_x_next,
                     current: history[step + 1],
                   });
                 } else return;
