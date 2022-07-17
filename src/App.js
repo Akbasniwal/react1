@@ -141,9 +141,9 @@ class Game extends React.Component {
             />
           </div>
           <div className="game-info">{status}</div>
-          <div className="basniwal">
+          <div className="ui buttons basniwal">
             <button
-              className="back"
+              className="ui animated button"
               onClick={() => {
                 const step = this.state.stepnum;
                 if (step > 0) {
@@ -154,10 +154,13 @@ class Game extends React.Component {
                 }
               }}
             >
-              <i className="undo icon"></i>
+              <div className="visible content">backward</div>
+              <div className="hidden content">
+                <i className="angle double left icon"></i>
+              </div>
             </button>
             <button
-              className="start"
+              className="ui button"
               onClick={() =>
                 this.setState({
                   history: [
@@ -173,7 +176,7 @@ class Game extends React.Component {
               Start New Game
             </button>
             <button
-              className="forward"
+              className="ui animated button"
               onClick={() => {
                 const step = this.state.stepnum;
                 if (history.length > step + 1) {
@@ -185,7 +188,10 @@ class Game extends React.Component {
                 } else return;
               }}
             >
-              <i className="redo icon"></i>
+              <div className="visible content">backward</div>
+              <div className="hidden content">
+                <i className="angle double right icon"></i>
+              </div>
             </button>
           </div>
         </div>
