@@ -188,7 +188,7 @@ class Game extends React.Component {
                 } else return;
               }}
             >
-              <div className="visible content">backward</div>
+              <div className="visible content">forward</div>
               <div className="hidden content">
                 <i className="angle double right icon"></i>
               </div>
