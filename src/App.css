@@ -1,14 +1,6 @@
-/* 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.square{
+  font-size: xx-large;
+  margin: -2px;
+  font-family: 'DynaPuff';
+  border: 4px solid rgba(59, 125, 126, 0.685);
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
