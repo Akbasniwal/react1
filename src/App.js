@@ -54,6 +54,7 @@ class Board extends React.Component {
                 color: "black",
                 fontSize: "xx-large",
                 fontWeight: "bolder",
+                marginTop :"10px",
               }}
             >
               Akbasniwal
