@@ -1,4 +1,6 @@
 import React from "react";
+import "./App.css";
+// import Footer from "./footer";
 
 function checkWinner(squares) {
   const lines = [
@@ -23,23 +25,6 @@ function checkWinner(squares) {
   return null;
 }
 
-// class Square extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       value: null,
-//     };
-//   }
-
-//   render() {
-//     return (
-//       <button className="square" onClick={() => this.props.onClick()}>
-//         {this.props.value}
-//       </button>
-//     );
-//   }
-// }
-
 function Square(props) {
   return (
     <button className="square" onClick={props.onClick}>
@@ -60,23 +45,37 @@ class Board extends React.Component {
 
   render() {
     return (
-      <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
+      <>
+        <div>
+          <div className="ui fixed menu header">
+            <a
+              href="https://akbasniwal.vercel.app"
+              style={{
+                color: "black",
+                fontSize: "xx-large",
+                fontWeight: "bolder",
+              }}
+            >
+              Akbasniwal
+            </a>
+          </div>
+          <div className="board-row">
+            {this.renderSquare(0)}
+            {this.renderSquare(1)}
+            {this.renderSquare(2)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(3)}
+            {this.renderSquare(4)}
+            {this.renderSquare(5)}
+          </div>
+          <div className="board-row">
+            {this.renderSquare(6)}
+            {this.renderSquare(7)}
+            {this.renderSquare(8)}
+          </div>
         </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
+      </>
     );
   }
 }
@@ -149,7 +148,7 @@ class Game extends React.Component {
                 if (step > 0) {
                   this.setState({
                     stepnum: step - 1,
-                    is_x_next:  !this.state.is_x_next,
+                    is_x_next: !this.state.is_x_next,
                   });
                 }
               }}
@@ -195,6 +194,7 @@ class Game extends React.Component {
             </button>
           </div>
         </div>
+        {/* <Footer className="footer" */}
       </div>
     );
   }
